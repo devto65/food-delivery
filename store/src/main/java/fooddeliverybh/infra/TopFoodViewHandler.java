@@ -28,7 +28,6 @@ public class TopFoodViewHandler {
             TopFood topFood = new TopFood();
             // view 객체에 이벤트의 Value 를 set 함
             topFood.setCount(0);
-            topFood.setAvgStar(0);
             topFood.setTotalStar(0);
             // view 레파지 토리에 save
             topFoodRepository.save(topFood);
@@ -50,8 +49,7 @@ public class TopFoodViewHandler {
                  TopFood topFood = topFoodOptional.get();
             // view 객체에 이벤트의 eventDirectValue 를 set 함
                 topFood.setCount(topFood.getCount() + 1);
-                topFood.setTotalStar(topFood.getTotalStar() + orderEvalutated.getStar());
-                topFood.setAvgStar(0);    
+                topFood.setScore(topFood.getScore() + orderEvalutated.getScore());
                 // view 레파지 토리에 save
                  topFoodRepository.save(topFood);
                 }

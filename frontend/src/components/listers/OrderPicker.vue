@@ -30,10 +30,13 @@
                                 Status :  {{item.status }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Star :  {{item.star }}
+                                Score :  {{item.score }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 PaymentId :  {{item.paymentId }}
+                            </v-list-item-subtitle>
+                            <v-list-item-subtitle>
+                                StoreId :  {{item.storeId }}
                             </v-list-item-subtitle>
                         </v-list-item-content>
 
@@ -86,6 +89,8 @@
                 if(val != undefined) {
                     var arr = this.list[val]._links.self.href.split('/');
                     obj['id'] = arr[4]; 
+                    
+                    
                     
                     
                     

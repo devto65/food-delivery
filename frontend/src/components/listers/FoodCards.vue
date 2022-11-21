@@ -70,7 +70,7 @@
             me.newValue = {
                 'name': '',
                 'count': 0,
-                'star': 0,
+                'score': 0,
                 'storeId': 0,
             }
         },

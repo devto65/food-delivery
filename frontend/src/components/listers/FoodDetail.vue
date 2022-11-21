@@ -12,7 +12,7 @@
                 <Number label="Count" v-model="item.count" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="Star" v-model="item.star" :editMode="editMode" @change="change" />
+                <Number label="Score" v-model="item.score" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="StoreId" v-model="item.storeId" :editMode="editMode" @change="change" />

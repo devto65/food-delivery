@@ -69,7 +69,7 @@
                     { text: "id", value: "id" },
                     { text: "name", value: "name" },
                     { text: "count", value: "count" },
-                    { text: "star", value: "star" },
+                    { text: "score", value: "score" },
                     { text: "storeId", value: "storeId" },
                 ],
             food : [],
@@ -90,7 +90,7 @@
             this.newValue = {
                 'name': '',
                 'count': 0,
-                'star': 0,
+                'score': 0,
                 'storeId': 0,
             }
         },

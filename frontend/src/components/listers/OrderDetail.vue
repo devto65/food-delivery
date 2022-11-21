@@ -6,10 +6,10 @@
 
         <v-card-text>
             <div>
-                <String label="FoodId" v-model="item.foodId" :editMode="editMode" @change="change" />
+                <Number label="FoodId" v-model="item.foodId" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <String label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />
+                <Number label="CustomerId" v-model="item.customerId" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <String label="Options" v-model="item.options" :editMode="editMode" @change="change" />
@@ -21,10 +21,13 @@
                 <String label="Status" v-model="item.status" :editMode="editMode" @change="change" />
             </div>
             <div>
-                <Number label="Star" v-model="item.star" :editMode="editMode" @change="change" />
+                <Number label="Score" v-model="item.score" :editMode="editMode" @change="change" />
             </div>
             <div>
                 <Number label="PaymentId" v-model="item.paymentId" :editMode="editMode" @change="change" />
+            </div>
+            <div>
+                <Number label="StoreId" v-model="item.storeId" :editMode="editMode" @change="change" />
             </div>
         </v-card-text>
 

@@ -21,7 +21,7 @@
                                 Count :  {{item.count }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
-                                Star :  {{item.star }}
+                                Score :  {{item.score }}
                             </v-list-item-subtitle>
                             <v-list-item-subtitle>
                                 StoreId :  {{item.storeId }}

@@ -29,13 +29,13 @@ public class Order  {
     
     
     
-    private String foodId;
+    private Long foodId;
     
     
     
     
     
-    private String customerId;
+    private Long customerId;
     
     
     
@@ -59,13 +59,19 @@ public class Order  {
     
     
     
-    private Integer star;
+    private Integer score;
     
     
     
     
     
     private Long paymentId;
+    
+    
+    
+    
+    
+    private Long storeId;
 
     @PostPersist
     public void onPostPersist(){

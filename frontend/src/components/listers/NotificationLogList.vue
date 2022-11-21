@@ -99,7 +99,7 @@
             this.values = temp.data._embedded.notificationlogs;
             
             this.newValue = {
-                'customerId': '',
+                'customerId': 0,
                 'message': '',
             }
         },

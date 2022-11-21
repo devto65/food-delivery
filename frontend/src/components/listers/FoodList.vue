@@ -20,7 +20,7 @@
                             [ Id :  {{data.id }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Name :  {{data.name }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Count :  {{data.count }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Star :  {{data.star }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Score :  {{data.score }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ StoreId :  {{data.storeId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
@@ -105,7 +105,7 @@
             this.newValue = {
                 'name': '',
                 'count': 0,
-                'star': 0,
+                'score': 0,
                 'storeId': 0,
             }
         },

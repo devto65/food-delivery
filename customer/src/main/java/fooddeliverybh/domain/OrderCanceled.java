@@ -5,10 +5,9 @@ import lombok.Data;
 import java.util.*;
 
 @Data
-public class OrderEvalutated extends AbstractEvent {
+public class OrderCanceled extends AbstractEvent {
 
     private Long id;
-    private Long foodId;
-    private Integer score;
-    private Long customerId;
+    private String foodId;
+    private String customerId;
 }

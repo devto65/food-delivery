@@ -24,7 +24,7 @@
                 { text: "id", value: "id" },
                 { text: "name", value: "name" },
                 { text: "count", value: "count" },
-                { text: "star", value: "star" },
+                { text: "score", value: "score" },
             ],
             topFood : [],
         }),

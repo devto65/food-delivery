@@ -52,11 +52,52 @@ public class OrderStatusViewHandler {
         try {
             if (!cooked.validate()) return;
                 // view 객체 조회
+            Optional<OrderStatus> orderStatusOptional = orderStatusRepository.findById(cooked.getOrderId());
+
+            if( orderStatusOptional.isPresent()) {
+                 OrderStatus orderStatus = orderStatusOptional.get();
+            // view 객체에 이벤트의 eventDirectValue 를 set 함
+                orderStatus.setId(cooked.getOrderId());    
+                orderStatus.setStatus(요리완료);    
+                // view 레파지 토리에 save
+                 orderStatusRepository.save(orderStatus);
+                }
+
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    @StreamListener(KafkaProcessor.INPUT)
+    public void whenOrderAccepted_then_UPDATE_3(@Payload OrderAccepted orderAccepted) {
+        try {
+            if (!orderAccepted.validate()) return;
+                // view 객체 조회
+            Optional<OrderStatus> orderStatusOptional = orderStatusRepository.findById(orderAccepted.getOrderId());
+
+            if( orderStatusOptional.isPresent()) {
+                 OrderStatus orderStatus = orderStatusOptional.get();
+            // view 객체에 이벤트의 eventDirectValue 를 set 함
+                orderStatus.setStatus(주문접수됨);    
+                // view 레파지 토리에 save
+                 orderStatusRepository.save(orderStatus);
+                }
+
 
         }catch (Exception e){
             e.printStackTrace();
         }
     }
 
+    @StreamListener(KafkaProcessor.INPUT)
+    public void whenOrderCanceled_then_DELETE_1(@Payload OrderCanceled orderCanceled) {
+        try {
+            if (!orderCanceled.validate()) return;
+            // view 레파지 토리에 삭제 쿼리
+            orderStatusRepository.deleteById(orderCanceled.getId());
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
 }
 

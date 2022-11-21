@@ -3,6 +3,7 @@ package fooddeliverybh.domain;
 import fooddeliverybh.domain.Cooked;
 import fooddeliverybh.domain.OrderAccepted;
 import fooddeliverybh.domain.OrderRejected;
+import fooddeliverybh.domain.CookingStarted;
 import fooddeliverybh.StoreApplication;
 import javax.persistence.*;
 import java.util.List;
@@ -29,7 +30,7 @@ public class StoreOrder  {
     
     
     
-    private String foodId;
+    private Long foodId;
     
     
     
@@ -89,6 +90,11 @@ public class StoreOrder  {
 
         OrderRejected orderRejected = new OrderRejected(this);
         orderRejected.publishAfterCommit();
+
+
+
+        CookingStarted cookingStarted = new CookingStarted(this);
+        cookingStarted.publishAfterCommit();
 
     }
 

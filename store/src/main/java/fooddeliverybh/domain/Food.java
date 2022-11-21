@@ -39,7 +39,7 @@ public class Food  {
     
     
     
-    private Integer star;
+    private Integer score;
     
     
     

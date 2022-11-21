@@ -72,8 +72,9 @@
                     { text: "options", value: "options" },
                     { text: "address", value: "address" },
                     { text: "status", value: "status" },
-                    { text: "star", value: "star" },
+                    { text: "score", value: "score" },
                     { text: "paymentId", value: "paymentId" },
+                    { text: "storeId", value: "storeId" },
                 ],
             order : [],
             newValue: {},
@@ -91,13 +92,14 @@
             this.values = temp.data._embedded.orders;
 
             this.newValue = {
-                'foodId': '',
-                'customerId': '',
+                'foodId': 0,
+                'customerId': 0,
                 'options': '',
                 'address': '',
                 'status': '',
-                'star': 0,
+                'score': 0,
                 'paymentId': 0,
+                'storeId': 0,
             }
         },
         methods: {

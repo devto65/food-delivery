@@ -17,6 +17,7 @@
                             
                             
                             
+                            
                         </v-list-item-title>
 
                         <v-list-item-subtitle style="font-size:25px; font-weight:700;">
@@ -26,8 +27,9 @@
                             [ Options :  {{data.options }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Address :  {{data.address }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ Status :  {{data.status }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                            [ Star :  {{data.star }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ Score :  {{data.score }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                             [ PaymentId :  {{data.paymentId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            [ StoreId :  {{data.storeId }} ] &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                         </v-list-item-subtitle>
 
                     </v-list-item-content>
@@ -109,13 +111,14 @@
             this.values = temp.data._embedded.orders;
             
             this.newValue = {
-                'foodId': '',
-                'customerId': '',
+                'foodId': 0,
+                'customerId': 0,
                 'options': '',
                 'address': '',
                 'status': '',
-                'star': 0,
+                'score': 0,
                 'paymentId': 0,
+                'storeId': 0,
             }
         },
         methods: {

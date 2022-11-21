@@ -19,7 +19,7 @@
         <v-card-text>
             <String label="Name" v-model="value.name" :editMode="editMode"/>
             <Number label="Count" v-model="value.count" :editMode="editMode"/>
-            <Number label="Star" v-model="value.star" :editMode="editMode"/>
+            <Number label="Score" v-model="value.score" :editMode="editMode"/>
             <Number label="StoreId" v-model="value.storeId" :editMode="editMode"/>
         </v-card-text>
 
